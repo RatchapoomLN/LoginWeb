@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <video src="img/sakura.mp4" autoplay loop playsinline muted></video>
+    <div class="pass1"></div>
+    <div class="pass2"></div>
+    <div class="center">
+    <h1>Login</h1>
+    <form action="dologin.php" method="post" autocomplete="off">
+            <div class="txt-field">
+                <input type="text" name="user" id="user" required>
+                <label for="user">User-Name</label>
+            </div>
+            <div class="txt-field">
+                <input type="password" name="password" id="password" required>
+                <label for="password">Pass-Word</label>
+            </div>
+            <br>
+            <button type="submit">Login!</button>
+            <a class="forget" href="forgetpassword.php">Forget Password</a>
+            <div class="signup-link"> Not a Mamber?? <br>
+            <a href="signup.php">Sign UP</a>
+            </div>
+            
+    </form>
+    </div>
+</body>
+</html>

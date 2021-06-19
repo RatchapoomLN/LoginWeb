@@ -1,0 +1,204 @@
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Kanit', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    font-size: 16px;
+}
+    body:hover .pass1::before, body:hover .pass1::after, body:active .pass1::before, body:active .pass1::after{
+    margin-left: 500px;
+    transform-origin: -500px 50%;
+    transition-delay: 0s;
+    transition-duration: 1s;
+  }
+    body:hover .pass2::before, body:hover .pass2::after, body:active .pass2::before, body:active .pass2::after {
+    margin-left: 500px;
+    transform-origin: -500px 50%;
+    transition-delay: 0.5s;
+    transition-duration: 1s;
+  }
+  .pass1::before, .pass1::after, .pass2::before, .pass2::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 200vmax;
+    height: 200vmax;
+    top: 50%;
+    left: 50%;
+    margin-top: -100vmax;
+    transform-origin: 0 50%;
+    transition: all 0.6s cubic-bezier(0.445, 0.05, 0, 1);
+    z-index: 10;
+    opacity: 1.0;
+    transition-delay: 0.1s;
+    transition-duration: 1s;
+  }
+  .pass1::before {
+    transform: rotate(0deg);
+    background: #ffba5f8c;
+  }
+  .pass1::after {
+    transform: rotate(90deg);
+    background: #a057ff;
+    transition-delay: 0.5s;
+  }
+
+  .pass2::before {
+    transform: rotate(-90deg);
+    background: #00789c;
+  }
+  .pass2::after {
+    transform: rotate(-180deg);
+    background: #003cff6c;
+    transition-delay: 0.5s;
+  } 
+.center {
+    position: absolute;
+    top: 150%;
+    left: 150%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    background-color: rgba(88, 236, 199, 0.719) ;
+    border-radius: 20px;
+    transition-delay: 0;
+    opacity: 0;
+    transition: 2s;
+}
+
+body:hover .center, body:active .center {
+    opacity: 1;
+    transition-delay: 2s;
+    transition: 1s;
+    top: 50%;
+    left: 50%;
+  }
+.center h1 {
+    text-align: center;
+    padding-bottom: 28px;
+    border-bottom: 1px solid silver;
+    color: #fff;
+    text-shadow: 2px 2px 3px black;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transform: rotateY(0deg);
+    transition-delay: 0s;
+    transition: 0s;
+    font-size: 26px;
+    
+}
+.center h1:hover{
+transform: rotateY(360deg);
+color: red;
+text-shadow: 5px 5px 10px red;
+transition: 3s;
+}
+.center form {
+    padding: 0px 40px;
+    box-sizing: border-box; 
+}
+form .txt-field {
+    position: relative;
+    margin: 30px 0px;
+}
+.txt-field input {
+    width: 100%;
+    padding: 0px 5px;
+    height: 40px;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-shadow: 1px 1px rgb(255, 0, 0);
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    transition: 0.8s;
+}
+.txt-field label {
+    position: absolute;
+    top:40%;
+    left: -25px;
+    transform: translate(50%);
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.txt-field input:focus ~ label,
+.txt-field input:valid ~ label {
+    top: -15px;
+    left: -35px;
+    color: #2691d9;
+    font-size: 0.90rem;
+}
+.txt-field input:focus {
+    border-bottom: 2px solid #ff0000;
+}
+button[type="submit"] {
+    width: 40%;
+    height: 40px;
+    top: 245px;
+    left: 50px;
+    transform: translate(50% -50%);
+    position: absolute;
+    border: none;
+    text-align: center;
+    background-color: #22d8c0 ;
+    text-shadow: 1px 1px 1px black;
+    border-radius: 25px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    transition: 0.5s;
+}
+button[type="submit"]:hover {
+    background-color: #da2f2f;
+    width: 75%;
+    font-size: 1.80rem;
+}
+.forget {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    margin: 10px 10px 5px 5px;
+    color: #f98365;
+    text-shadow: 1px 1px 1px black;
+    text-decoration: none;
+    transition: 1s;
+}
+.forget:hover {
+    text-decoration: underline;
+    font-size: 20px;
+    transition: 0.4s;
+}
+.signup-link {
+    margin: 30px 0px;
+    text-align: center;
+    color: #f9de59;
+    text-shadow: 1px 1px 1px black;
+    font-size: 16px;
+}
+.signup-link a {
+    color: #2691d9;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 1s;
+}
+.signup-link a:hover {
+    text-decoration: underline;
+    font-size: 30px;
+    transition: 0.4s;
+}
